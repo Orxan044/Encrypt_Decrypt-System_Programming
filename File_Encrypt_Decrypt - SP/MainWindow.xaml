@@ -3,10 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:File_Encrypt_Decrypt___SP"
+        xmlns:local="clr-namespace:File_Encrypt_Decrypt___SP" WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="600">
+        Title="MainWindow" Height="200" Width="400">
     <Grid>
+        <TextBox Name="FilePathTextBox" Width="250" Height="25" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button Content="File" Width="75" Height="25" HorizontalAlignment="Left" Margin="270,10,0,0" VerticalAlignment="Top" Click="SelectFileButton_Click"/>
 
+        <RadioButton x:Name="EncryptRadioButton" Content="Encrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="20" Margin="250,50,0,0" GroupName="Operation"/>
+        <RadioButton x:Name="DecryptRadioButton" Content="Decrypt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="20" Margin="320,50,0,0" GroupName="Operation"/>
+        
+        <!-- Password TextBox -->
+
+        <TextBlock Text="Password" Width="50" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0" ></TextBlock>
+        <PasswordBox Name="PasswordBox" Width="150" Height="25" HorizontalAlignment="Left" Margin="70,45,0,0" VerticalAlignment="Top"/>
+
+        <ProgressBar Name="ProgressBar" Width="350" Height="25" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnStart" Content="Start" Width="75" Height="25" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Click="StartButton_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" Width="75" Height="25" HorizontalAlignment="Left" Margin="100,120,0,0" VerticalAlignment="Top" Click="CancelButton_Click"/>
     </Grid>
 </Window>
